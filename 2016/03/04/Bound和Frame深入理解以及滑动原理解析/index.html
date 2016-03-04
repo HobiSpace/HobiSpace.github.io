@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="感想," />
+  <meta name="keywords" content="UIView," />
 
 
 
@@ -57,16 +57,22 @@
 
 
 
-<meta name="description" content="&amp;#x5173;&amp;#x4E8E;&amp;#x8FD9;&amp;#x4E2A;&amp;#x535A;&amp;#x5BA2;&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x6211;&amp;#x4F1A;&amp;#x62BD;&amp;#x8D77;&amp;#x7B4B;&amp;#x6765;&amp;#x5199;&amp;#x535A;&amp;#x5BA2;&amp;#x7A81;&amp;#x7136;&amp;#x53D1;&amp;#x73B0;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;">
+<meta name="description" content="bound&amp;#x548C;frame &amp;#x6DF1;&amp;#x5165;&amp;#x7406;&amp;#x89E3;&amp;#x4EE5;&amp;#x53CA;&amp;#x6ED1;&amp;#x52A8;&amp;#x539F;&amp;#x7406;&amp;#x89E3;&amp;#x6790;bound &amp;#x548C; frame &amp;#x8FD9;&amp;#x4E24;&amp;#x4E2A;&amp;#x5C5E;&amp;#x6027;&amp;#x6211;&amp;#x4EEC;&amp;#x4E00;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的博客之路正式开始～！">
-<meta property="og:url" content="http://hobi.space/2016/03/03/我的博客之路正式开始～！/index.html">
+<meta property="og:title" content="Bound和Frame深入理解以及滑动原理解析">
+<meta property="og:url" content="http://hobi.space/2016/03/04/Bound和Frame深入理解以及滑动原理解析/index.html">
 <meta property="og:site_name" content="HobiSpace">
-<meta property="og:description" content="&amp;#x5173;&amp;#x4E8E;&amp;#x8FD9;&amp;#x4E2A;&amp;#x535A;&amp;#x5BA2;&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x6211;&amp;#x4F1A;&amp;#x62BD;&amp;#x8D77;&amp;#x7B4B;&amp;#x6765;&amp;#x5199;&amp;#x535A;&amp;#x5BA2;&amp;#x7A81;&amp;#x7136;&amp;#x53D1;&amp;#x73B0;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;">
-<meta property="og:updated_time" content="2016-03-04T06:53:13.000Z">
+<meta property="og:description" content="bound&amp;#x548C;frame &amp;#x6DF1;&amp;#x5165;&amp;#x7406;&amp;#x89E3;&amp;#x4EE5;&amp;#x53CA;&amp;#x6ED1;&amp;#x52A8;&amp;#x539F;&amp;#x7406;&amp;#x89E3;&amp;#x6790;bound &amp;#x548C; frame &amp;#x8FD9;&amp;#x4E24;&amp;#x4E2A;&amp;#x5C5E;&amp;#x6027;&amp;#x6211;&amp;#x4EEC;&amp;#x4E00;">
+<meta property="og:image" content="http://hobi.space/2016/03/04/Bound和Frame深入理解以及滑动原理解析/nonsetBound.png">
+<meta property="og:image" content="http://hobi.space/2016/03/04/Bound和Frame深入理解以及滑动原理解析/nonsetBoundLog.png">
+<meta property="og:image" content="http://hobi.space/2016/03/04/Bound和Frame深入理解以及滑动原理解析/setBound.png">
+<meta property="og:image" content="http://hobi.space/2016/03/04/Bound和Frame深入理解以及滑动原理解析/setBoundLog.png">
+<meta property="og:image" content="http://hobi.space/2016/03/04/Bound和Frame深入理解以及滑动原理解析/Scroll.gif">
+<meta property="og:updated_time" content="2016-03-04T06:54:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客之路正式开始～！">
-<meta name="twitter:description" content="&amp;#x5173;&amp;#x4E8E;&amp;#x8FD9;&amp;#x4E2A;&amp;#x535A;&amp;#x5BA2;&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x6211;&amp;#x4F1A;&amp;#x62BD;&amp;#x8D77;&amp;#x7B4B;&amp;#x6765;&amp;#x5199;&amp;#x535A;&amp;#x5BA2;&amp;#x7A81;&amp;#x7136;&amp;#x53D1;&amp;#x73B0;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;">
+<meta name="twitter:title" content="Bound和Frame深入理解以及滑动原理解析">
+<meta name="twitter:description" content="bound&amp;#x548C;frame &amp;#x6DF1;&amp;#x5165;&amp;#x7406;&amp;#x89E3;&amp;#x4EE5;&amp;#x53CA;&amp;#x6ED1;&amp;#x52A8;&amp;#x539F;&amp;#x7406;&amp;#x89E3;&amp;#x6790;bound &amp;#x548C; frame &amp;#x8FD9;&amp;#x4E24;&amp;#x4E2A;&amp;#x5C5E;&amp;#x6027;&amp;#x6211;&amp;#x4EEC;&amp;#x4E00;">
+<meta name="twitter:image" content="http://hobi.space/2016/03/04/Bound和Frame深入理解以及滑动原理解析/nonsetBound.png">
 
 
 
@@ -84,7 +90,7 @@
   };
 </script>
 
-  <title> 我的博客之路正式开始～！ | HobiSpace </title>
+  <title> Bound和Frame深入理解以及滑动原理解析 | HobiSpace </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +242,7 @@
             
             
               
-                我的博客之路正式开始～！
+                Bound和Frame深入理解以及滑动原理解析
               
             
           </h1>
@@ -248,8 +254,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-03T00:54:44+08:00" content="2016-03-03">
-              2016-03-03
+            <time itemprop="dateCreated" datetime="2016-03-04T12:52:28+08:00" content="2016-03-04">
+              2016-03-04
             </time>
           </span>
 
@@ -262,8 +268,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
+                  <a href="/categories/“iOS”/" itemprop="url" rel="index">
+                    <span itemprop="name">“iOS”</span>
                   </a>
                 </span>
 
@@ -278,8 +284,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/03/我的博客之路正式开始～！/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/我的博客之路正式开始～！/" itemprop="commentsCount"></span>
+                <a href="/2016/03/04/Bound和Frame深入理解以及滑动原理解析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/Bound和Frame深入理解以及滑动原理解析/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -301,9 +307,16 @@
       
 
       
-        <h1 id="&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;"><a href="#&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;" class="headerlink" title="&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;"></a>&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;</h1><h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4F1A;&#x62BD;&#x8D77;&#x7B4B;&#x6765;&#x5199;&#x535A;&#x5BA2;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4F1A;&#x62BD;&#x8D77;&#x7B4B;&#x6765;&#x5199;&#x535A;&#x5BA2;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4F1A;&#x62BD;&#x8D77;&#x7B4B;&#x6765;&#x5199;&#x535A;&#x5BA2;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4F1A;&#x62BD;&#x8D77;&#x7B4B;&#x6765;&#x5199;&#x535A;&#x5BA2;</h2><p>&#x7A81;&#x7136;&#x53D1;&#x73B0;&#x81EA;&#x5DF1;&#x7684;&#x5927;&#x5B66;&#x53EA;&#x5269;&#x4E0B;&#x6700;&#x540E;&#x7684;&#x4E09;&#x56DB;&#x4E2A;&#x6708;&#xFF0C;&#x611F;&#x89C9;&#x81EA;&#x5DF1;&#x5728;&#x5927;&#x5B66;&#x91CC;&#x9762;&#x4EC0;&#x4E48;&#x90FD;&#x6CA1;&#x6709;&#x7559;&#x4E0B;&#xFF0C;&#x5C31;&#x8981;&#x7ED3;&#x675F;&#x4EBA;&#x751F;&#x4E2D;&#x6700;&#x540E;&#x7684;&#x6821;&#x56ED;&#x751F;&#x6D3B;&#x4E86;&#x3002;<br>&#x6240;&#x4EE5;&#x5728;&#x8FD9;&#x6700;&#x540E;&#x7684;&#x51E0;&#x4E2A;&#x6708;&#x7684;&#x751F;&#x6D3B;&#x91CC;&#xFF0C;&#x5E0C;&#x671B;&#x8BF4;&#x80FD;&#x628A;&#x81EA;&#x5DF1;&#x5B66;&#x5230;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x4E00;&#x4E9B;&#x751F;&#x6D3B;&#x6709;&#x8DA3;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x90FD;&#x7528;&#x6587;&#x5B57;&#xFF0C;&#x56FE;&#x7247;&#x53BB;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#x3002;&#x54C8;&#x54C8;&#x54C8;&#xFF0C;&#x6211;&#x60F3;&#x4EE5;&#x540E;&#x770B;&#x56DE;&#x8FD9;&#x4E9B;&#x5F88;&#x4E45;&#x4EE5;&#x524D;&#x7684;&#x6587;&#x7AE0;&#x4F30;&#x8BA1;&#x662F;&#x4E00;&#x4EF6;&#x5F88;&#x6709;&#x8DA3;&#x7684;&#x4E8B;&#x60C5;&#x5427;&#x3002;<br>&#x540C;&#x65F6;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x63A8;&#x52A8;&#x6211;&#x5B66;&#x4E60;&#x66F4;&#x591A;&#x77E5;&#x8BC6;&#x7684;&#x52A8;&#x529B;&#x5427;&#xFF0C;&#x672A;&#x6765;&#x8FD9;&#x51E0;&#x4E2A;&#x6708;&#x6211;&#x5E94;&#x8BE5;&#x4F1A;&#x53BB;&#x5B66;&#x4E60;&#x4E00;&#x4E9B;iOS&#x6BD4;&#x8F83;&#x725B;b&#x7684;&#x5F00;&#x6E90;&#x6846;&#x67B6;&#x6E90;&#x7801;&#x50CF;AFNetWorking&#xFF0C;SDWebImage&#x7B49;&#x7B49;&#x3002;&#x4E5F;&#x4F1A;&#x628A;&#x770B;&#x5B8C;&#x8FD9;&#x4E9B;&#x6846;&#x67B6;&#x7684;&#x4E00;&#x4E9B;&#x611F;&#x609F;&#x5206;&#x4EAB;&#x5230;&#x535A;&#x5BA2;&#x4E0A;&#x5662;&#xFF5E;<br><a id="more"></a></p>
-<h2 id="&#x535A;&#x5BA2;&#x642D;&#x5EFA;"><a href="#&#x535A;&#x5BA2;&#x642D;&#x5EFA;" class="headerlink" title="&#x535A;&#x5BA2;&#x642D;&#x5EFA;"></a>&#x535A;&#x5BA2;&#x642D;&#x5EFA;</h2><p>&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#x662F;&#x7528;Hexo&#xFF0B;Github&#x642D;&#x5EFA;&#x7684;&#x5662;&#xFF0C;Theme&#x7528;&#x7684;&#x662F;Next&#xFF0C;&#x5927;&#x5BB6;&#x90FD;&#x53EF;&#x4EE5;&#x5728;Github&#x627E;&#x5230;&#x8FD9;&#x4E2A;Theme&#x3002;&#x6211;&#x4E4B;&#x524D;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x7528;Django&#x642D;&#x5EFA;&#x7684;&#x535A;&#x5BA2;&#x653E;&#x5728;Sae&#x4E0A;&#xFF0C;&#x4F46;&#x662F;Sae&#x514D;&#x8D39;&#x7684;&#x670D;&#x52A1;&#x5668;&#x800C;&#x4E14;&#x6211;&#x8FD9;&#x79CD;&#x5ACC;&#x9EBB;&#x70E6;&#x4E0D;&#x53BB;&#x5907;&#x6848;&#x7684;&#xFF0C;&#x786E;&#x5B9E;&#x6709;&#x70B9;&#x6162;&#xFF0C;&#x81EA;&#x5DF1;&#x53C8;&#x7A77;&#x4E70;&#x4E0D;&#x8D77;&#x963F;&#x91CC;&#x4E91;&#xFF0C;&#x5BFC;&#x81F4;&#x90A3;&#x670D;&#x52A1;&#x5668;&#x7684;&#x901F;&#x5EA6;&#x771F;&#x662F;&#x65E0;&#x6CD5;&#x5FCD;&#x53D7;&#x554A;&#x3002;&#x800C;&#x4E14;&#x6211;&#x4E5F;&#x4E0D;&#x662F;&#x4E13;&#x4E1A;&#x641E;&#x7F51;&#x7AD9;&#x7684;&#xFF0C;&#x505A;&#x5F97;&#x4E5F;&#x5F88;&#x6076;&#x5FC3;&#x3002;&#x6240;&#x4EE5;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x60F3;&#x505A;&#x535A;&#x5BA2;&#x7684;&#x4F46;&#x662F;&#x5ACC;&#x9EBB;&#x70E6;&#x81EA;&#x5DF1;&#x6253;Html&#x4EE3;&#x7801;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x4EE3;&#x7801;&#x7684;&#xFF0C;&#x60F3;&#x4E13;&#x6CE8;&#x4E8E;&#x5199;&#x6587;&#x7AE0;&#x5185;&#x5BB9;&#x7684;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x7528;Hexo&#xFF0B;Github&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x642D;&#x5EFA;&#x3002;&#x5177;&#x4F53;&#x642D;&#x5EFA;&#x65B9;&#x6CD5;&#x5728;<a href="http://ibruce.info/2013/11/22/hexo-your-blog/?utm_source=tuicool" target="_blank" rel="external">&#x8FD9;&#x4E2A;&#x94FE;&#x63A5;</a>&#x5662;&#xFF0C;&#x611F;&#x8C22;&#x8FD9;&#x4F4D;&#x4EC1;&#x5144;&#x7684;&#x642D;&#x5EFA;&#x65B9;&#x6CD5;&#x4ECB;&#x7ECD;&#x554A;&#xFF0C;&#x5341;&#x5206;&#x8BE6;&#x5C3D;&#x3002;&#x7136;&#x540E;&#x5199;&#x535A;&#x6587;&#x7528;&#x7684;&#x662F;Markdown&#xFF0C;&#x611F;&#x8C22;&#x7F8E;&#x56FE;&#x7684;&#x6587;&#x660E;&#x7AE5;&#x978B;Markdown&#x7684;&#x5206;&#x4EAB;&#x554A;&#xFF0C;&#x8BA9;&#x6211;&#x4E86;&#x89E3;&#x5230;&#x8FD9;&#x4E2A;&#x795E;&#x5668;&#x3002;</p>
-<h2 id="&#x535A;&#x5BA2;&#x5185;&#x5BB9;"><a href="#&#x535A;&#x5BA2;&#x5185;&#x5BB9;" class="headerlink" title="&#x535A;&#x5BA2;&#x5185;&#x5BB9;"></a>&#x535A;&#x5BA2;&#x5185;&#x5BB9;</h2><p>&#x6211;&#x662F;&#x4E00;&#x540D;&#x5B66;&#x4E60;iOS&#x7684;&#x7AE5;&#x978B;&#x5662;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#x5E94;&#x8BE5;&#x4F1A;&#x6709;&#x6BD4;&#x8F83;&#x591A;&#x6211;&#x5728;iOS&#x5B66;&#x4E60;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x611F;&#x60F3;&#x548C;&#x77E5;&#x8BC6;&#x7684;&#x5206;&#x4EAB;&#xFF0C;&#x5E0C;&#x671B;&#x5404;&#x8DEF;&#x5927;&#x795E;&#x90FD;&#x6765;&#x6307;&#x5BFC;&#x6307;&#x5BFC;&#xFF0C;&#x5171;&#x540C;&#x5B66;&#x4E60;&#x554A;&#x3002;&#x52A0;&#x6CB9;&#xFF5E;&#xFF5E;&#xFF5E;&#xFF01;&#xFF01;&#xFF01;&#xFF01;</p>
+        <h1 id="bound&#x548C;frame-&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4EE5;&#x53CA;&#x6ED1;&#x52A8;&#x539F;&#x7406;&#x89E3;&#x6790;"><a href="#bound&#x548C;frame-&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4EE5;&#x53CA;&#x6ED1;&#x52A8;&#x539F;&#x7406;&#x89E3;&#x6790;" class="headerlink" title="bound&#x548C;frame &#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4EE5;&#x53CA;&#x6ED1;&#x52A8;&#x539F;&#x7406;&#x89E3;&#x6790;"></a>bound&#x548C;frame &#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4EE5;&#x53CA;&#x6ED1;&#x52A8;&#x539F;&#x7406;&#x89E3;&#x6790;</h1><p>bound &#x548C; frame &#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x6211;&#x4EEC;&#x4E00;&#x76F4;&#x4F7F;&#x7528;&#x7684;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x771F;&#x7684;&#x61C2;&#x5417;&#xFF1F;&#x4ECA;&#x5929;&#x5728;&#x505A;UICollectionViewFlowLayout&#x65F6;&#x5019;&#xFF0C;&#x597D;&#x5947;&#x8F93;&#x51FA;&#x4E86;&#x4E00;&#x4E0B;bound &#x548C; frame &#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x53D1;&#x73B0;&#x5927;&#x6709;&#x533A;&#x522B;&#xFF0C;&#x800C;&#x4E14;&#x6211;&#x4EEC;&#x7684;scrollview&#x4EE5;&#x53CA;&#x5176;&#x5B50;&#x7C7B;&#x7684;&#x6ED1;&#x52A8;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x8FD9;&#x4E24;&#x4E2A;&#x770B;&#x4F3C;&#x7B80;&#x5355;&#x7684;&#x5C5E;&#x6027;&#x53BB;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<h2 id="bound-&#x548C;-frame-&#x6982;&#x5FF5;&#x7684;&#x7406;&#x89E3;"><a href="#bound-&#x548C;-frame-&#x6982;&#x5FF5;&#x7684;&#x7406;&#x89E3;" class="headerlink" title="bound &#x548C; frame &#x6982;&#x5FF5;&#x7684;&#x7406;&#x89E3;"></a>bound &#x548C; frame &#x6982;&#x5FF5;&#x7684;&#x7406;&#x89E3;</h2><p>bound&#x548C;frame &#x90FD;&#x662F;&#x4E00;&#x4E2A;CGRect&#xFF0C;&#x90FD;&#x6709;origin&#x548C;size&#xFF0C;&#x5176;&#x533A;&#x522B;&#x4E3B;&#x8981;&#x4F53;&#x73B0;&#x5728;origin&#x3002;origin&#x4E3A;&#x76F8;&#x5BF9;&#x4E8E;&#x53C2;&#x7167;&#x70B9;&#x7684;&#x4E00;&#x4E2A;CGPoint&#x3002;<br>bound:&#x53C2;&#x7167;&#x70B9;&#x4E3A;&#x89C6;&#x56FE;&#x81EA;&#x5DF1;&#x7684;&#x5750;&#x6807;&#x7CFB;&#xFF0C;&#x4E2A;&#x4EBA;&#x7406;&#x89E3;&#x5C31;&#x662F;&#x53C2;&#x7167;&#x70B9;&#x6C38;&#x8FDC;&#x90FD;&#x4E3A;&#x89C6;&#x56FE;&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x70B9;&#xFF0C;&#x800C;setBound &#x5219;&#x662F;&#x8BBE;&#x7F6E;&#x53C2;&#x7167;&#x70B9;&#x4E3A;&#x591A;&#x5C11;&#x5750;&#x6807;<br>frame:&#x53C2;&#x7167;&#x70B9;&#x4E3A;&#x7236;&#x89C6;&#x56FE;&#x7684;&#x5750;&#x6807;&#x7CFB;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;&#x53C2;&#x7167;&#x70B9;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF0C;frame&#x7684;origin&#x7684;xy&#x503C;&#xFF0C;&#x4E0E;&#x7236;&#x89C6;&#x56FE;bound&#x5750;&#x6807;&#x7CFB;&#x5185;&#x7684;xy&#x503C;&#x76F8;&#x7B49;<br><a id="more"></a><br>&#x6211;&#x7684;&#x6587;&#x5B57;&#x8868;&#x8FBE;&#x53EF;&#x80FD;&#x6709;&#x70B9;&#x5751;&#xFF0C;&#x8FD8;&#x662F;&#x76F4;&#x63A5;&#x4E0A;&#x4EE3;&#x7801;&#x548C;&#x793A;&#x610F;&#x56FE;&#xFF1A;</p>
+<figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIView</span> *view1 = [[<span class="built_in">UIView</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">50</span>, <span class="number">50</span>, <span class="number">300</span>, <span class="number">300</span>)];</span><br><span class="line"><span class="comment">//[view1 setBounds:CGRectMake(-30, -30, 300, 300)];</span></span><br><span class="line">view1.backgroundColor = [<span class="built_in">UIColor</span> redColor];</span><br><span class="line">[<span class="keyword">self</span>.view addSubview:view1];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@&quot;\nview1 frame:%@========view1 bounds:%@&quot;</span>,<span class="built_in">NSStringFromCGRect</span>(view1.frame),<span class="built_in">NSStringFromCGRect</span>(view1.bounds));</span><br><span class="line"></span><br><span class="line"><span class="built_in">UIView</span> *view2 = [[<span class="built_in">UIView</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">150</span>, <span class="number">150</span>)];</span><br><span class="line">view2.backgroundColor = [<span class="built_in">UIColor</span> yellowColor];</span><br><span class="line">[view2 setBounds:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">100</span>, <span class="number">150</span>, <span class="number">150</span>)];</span><br><span class="line">[view1 addSubview:view2];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@&quot;\nview2 frame:%@========view2 bounds:%@&quot;</span>,<span class="built_in">NSStringFromCGRect</span>(view2.frame),<span class="built_in">NSStringFromCGRect</span>(view2.bounds));</span><br></pre></td></tr></table></figure>
+<img src="/2016/03/04/Bound&#x548C;Frame&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4EE5;&#x53CA;&#x6ED1;&#x52A8;&#x539F;&#x7406;&#x89E3;&#x6790;/nonsetBound.png" alt="&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x5BF9;View1 setBounds &#x7236;&#x89C6;&#x56FE;&#x5750;&#x6807;&#x7CFB;&#x53C2;&#x7167;&#x70B9;&#x5DE6;&#x4E0A;&#x89D2;&#x70B9;&#x4E3A;{0,0}" title="&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x5BF9;View1 setBounds &#x7236;&#x89C6;&#x56FE;&#x5750;&#x6807;&#x7CFB;&#x53C2;&#x7167;&#x70B9;&#x5DE6;&#x4E0A;&#x89D2;&#x70B9;&#x4E3A;{0,0}">
+<img src="/2016/03/04/Bound&#x548C;Frame&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4EE5;&#x53CA;&#x6ED1;&#x52A8;&#x539F;&#x7406;&#x89E3;&#x6790;/nonsetBoundLog.png" alt="&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x5BF9;View1 setBounds &#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;view1&#x7684;frame&#x4E3A;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;self.view &#x539F;&#x70B9;{0,0} &#x504F;&#x79FB;&#x4E86;{50&#xFF0C;50},view2&#x7684;frame&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;view1&#x7684;bound&#x53C2;&#x7167;&#x70B9;{0,0} &#x504F;&#x79FB;&#x4E3A;{0,0} &#x800C;&#x5B83;&#x4EEC;&#x9ED8;&#x8BA4;&#x7684;bound&#x539F;&#x70B9;&#x90FD;&#x4E3A;{0,0}" title="&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x5BF9;View1 setBounds &#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;view1&#x7684;frame&#x4E3A;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;self.view &#x539F;&#x70B9;{0,0} &#x504F;&#x79FB;&#x4E86;{50&#xFF0C;50},view2&#x7684;frame&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;view1&#x7684;bound&#x53C2;&#x7167;&#x70B9;{0,0} &#x504F;&#x79FB;&#x4E3A;{0,0} &#x800C;&#x5B83;&#x4EEC;&#x9ED8;&#x8BA4;&#x7684;bound&#x539F;&#x70B9;&#x90FD;&#x4E3A;{0,0}">
+<p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x5BF9;view1 &#x8FDB;&#x884C;[view1 setBounds:CGRectMake(-30, -30, 300, 300)];<br><img src="/2016/03/04/Bound&#x548C;Frame&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4EE5;&#x53CA;&#x6ED1;&#x52A8;&#x539F;&#x7406;&#x89E3;&#x6790;/setBound.png" alt="View1 setBounds &#x7236;&#x89C6;&#x56FE;&#x5750;&#x6807;&#x7CFB;&#x53C2;&#x7167;&#x70B9;&#x5DE6;&#x4E0A;&#x89D2;&#x70B9;&#x4ECE;{0,0}&#x53D8;&#x6210;&#x4E86;{-30,-30} View2&#x7684;frame&#x4E3A;{0,0} &#x610F;&#x601D;&#x4E3A;&#x5728;&#x7236;&#x89C6;&#x56FE;&#x53C2;&#x7167;&#x5750;&#x6807;&#x7CFB;{0,0}&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x800C;&#x6B64;&#x65F6;&#x7531;&#x4E8E;&#x5BF9;View1setBound&#x7684;&#x539F;&#x56E0; &#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;{-30,-30},&#x6240;&#x4EE5;{0,0}&#x4F4D;&#x7F6E;&#x5F80;&#x53F3;&#x4E0B;&#x504F;&#x79FB;" title="View1 setBounds &#x7236;&#x89C6;&#x56FE;&#x5750;&#x6807;&#x7CFB;&#x53C2;&#x7167;&#x70B9;&#x5DE6;&#x4E0A;&#x89D2;&#x70B9;&#x4ECE;{0,0}&#x53D8;&#x6210;&#x4E86;{-30,-30} View2&#x7684;frame&#x4E3A;{0,0} &#x610F;&#x601D;&#x4E3A;&#x5728;&#x7236;&#x89C6;&#x56FE;&#x53C2;&#x7167;&#x5750;&#x6807;&#x7CFB;{0,0}&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x800C;&#x6B64;&#x65F6;&#x7531;&#x4E8E;&#x5BF9;View1setBound&#x7684;&#x539F;&#x56E0; &#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;{-30,-30},&#x6240;&#x4EE5;{0,0}&#x4F4D;&#x7F6E;&#x5F80;&#x53F3;&#x4E0B;&#x504F;&#x79FB;"><br><img src="/2016/03/04/Bound&#x548C;Frame&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4EE5;&#x53CA;&#x6ED1;&#x52A8;&#x539F;&#x7406;&#x89E3;&#x6790;/setBoundLog.png" alt="setBoundLog.png" title=""></p>
+<p>&#x6240;&#x4EE5;&#x8BF4;Frame&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x6765;&#x53C2;&#x7167;&#x7684;&#xFF0C;Bound&#x5219;&#x662F;&#x89C6;&#x56FE;&#x672C;&#x8EAB;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x3002;</p>
+<p>&#x540C;&#x6837;&#x7684;&#xFF0C;&#x5176;Size&#x6982;&#x5FF5;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;frame&#x7684;size&#x4E3A;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;&#x7684;size&#xFF0C;&#x800C;bound&#x5219;&#x662F;&#x81EA;&#x8EAB;&#x5B9E;&#x9645;&#x663E;&#x793A;&#x5927;&#x5C0F;&#x3002;view2 initwithframe &#x5219;&#x662F;&#x4E3A;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x4E3A;origin  &#x7533;&#x8BF7;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A;size&#x7684;&#x5BB9;&#x5668;&#x5728;&#x7236;&#x89C6;&#x56FE;&#x4E0A;&#x3002;&#x5047;&#x5982;&#x8BF4;&#x5BF9;view2&#x8FDB;&#x884C;setBound &#x6709;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x60C5;&#x51B5;1.bound&gt;frame&#xFF0C;&#x90A3;&#x4E48;frame&#x4F1A;&#x88AB;&#x6491;&#x5927;&#xFF0C;&#x56E0;&#x4E3A;&#x5B9E;&#x9645;&#x663E;&#x793A;&#x5185;&#x5BB9;&#x6BD4;&#x7533;&#x8BF7;&#x7684;&#x5BB9;&#x5668;&#x5927;&#x3002;&#x4F46;&#x662F;frame&#x7684;&#x53C2;&#x7167;&#x70B9;&#x4E0D;&#x4F1A;&#x56E0;&#x4E3A;&#x88AB;&#x6491;&#x5927;&#x800C;&#x6539;&#x53D8;&#xFF0C;&#x4EB2;&#x6D4B;&#xFF5E;<br>2.bound&lt;=frame&#x5C0F;&#xFF0C;bound&#x80FD;&#x653E;&#x8FDB;&#x7533;&#x8BF7;&#x7684;&#x5BB9;&#x5668;&#x5185;&#x663E;&#x793A;&#xFF0C;&#x6B63;&#x5E38;&#x663E;&#x793A;</p>
+<h2 id="&#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x5229;&#x7528;&#x5B9E;&#x73B0;ScrollView&#x7684;&#x6ED1;&#x52A8;"><a href="#&#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x5229;&#x7528;&#x5B9E;&#x73B0;ScrollView&#x7684;&#x6ED1;&#x52A8;" class="headerlink" title="&#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x5229;&#x7528;&#x5B9E;&#x73B0;ScrollView&#x7684;&#x6ED1;&#x52A8;"></a>&#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x5229;&#x7528;&#x5B9E;&#x73B0;ScrollView&#x7684;&#x6ED1;&#x52A8;</h2><p>&#x6ED1;&#x52A8;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x7236;&#x89C6;&#x56FE;&#x7684;Bound&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x81EA;&#x89C6;&#x56FE;&#x7684;Frame&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x6539;&#x53D8;&#x7236;&#x89C6;&#x56FE;setBound&#xFF0C;&#x5373;&#x53EF;&#x6539;&#x53D8;&#x81EA;&#x89C6;&#x56FE;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5229;&#x7528;CollectionView&#x6765;&#x770B;&#x4E00;&#x4E0B;<br>&#x5148;&#x770B;&#x56FE;&#xFF1A;<br><img src="/2016/03/04/Bound&#x548C;Frame&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x4EE5;&#x53CA;&#x6ED1;&#x52A8;&#x539F;&#x7406;&#x89E3;&#x6790;/Scroll.gif" alt="Scroll.gif" title=""></p>
+<p>&#x6BCF;&#x4E00;&#x4E2A;Cell&#x7684;&#x4F4D;&#x7F6E;&#x90FD;&#x662F;&#x901A;&#x8FC7;UICollectionViewLayoutAttributes &#x91CC;&#x9762;&#x7684;frame&#x5C5E;&#x6027;&#x5728;Layout&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x6765;&#x8BBE;&#x7F6E;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x76F8;&#x5BF9;&#x4E8E;&#x7236;&#x89C6;&#x56FE;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x4E0D;&#x4F1A;&#x6709;&#x53D8;&#x5316;&#x7684;&#xFF0C;&#x53D8;&#x5316;&#x7684;&#x662F;&#x7236;&#x89C6;&#x56FE;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x3002;&#x6839;&#x636E;&#x4E0A;&#x9762;&#x7684;&#x7406;&#x89E3;&#xFF0C;&#x6240;&#x6709;&#x89C6;&#x56FE;&#x5DE6;&#x4E0A;&#x89D2;&#x53C2;&#x7167;&#x70B9;&#x9ED8;&#x8BA4;&#x4E3A;{0,0}&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x7236;&#x89C6;&#x56FE;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x8FDB;&#x884C;setBound&#x6210;{&gt;0&#xFF0C;&gt;0}&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x90A3;&#x4E48;&#x5B50;&#x89C6;&#x56FE;&#x5C31;&#x4F1A;&#x5F80;&#x4E0A;&#x79FB;&#xFF0C;&#x76F8;&#x53CD;&#xFF0C;&#x5219;&#x4F1A;&#x5F80;&#x4E0B;&#x79FB;&#x3002;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x6211;&#x4E0A;&#x9762;Bound&#x548C;Frame&#x6982;&#x5FF5;&#x548C;&#x8FD9;&#x4E2A;Gif&#x4E00;&#x8D77;&#x597D;&#x597D;&#x7684;&#x7406;&#x89E3;&#x4E00;&#x4E0B;&#x5594;&#xFF5E;&#xFF5E;</p>
 
       
     </div>
@@ -318,7 +331,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/感想/" rel="tag">#感想</a>
+            <a href="/tags/UIView/" rel="tag">#UIView</a>
           
         </div>
       
@@ -327,13 +340,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/03/我的博客之路正式开始～！/" rel="next" title="我的博客之路正式开始～！">
+                <i class="fa fa-chevron-left"></i> 我的博客之路正式开始～！
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/04/Bound和Frame深入理解以及滑动原理解析/" rel="prev" title="Bound和Frame深入理解以及滑动原理解析">
-                Bound和Frame深入理解以及滑动原理解析 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -382,8 +395,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/03/我的博客之路正式开始～！/"
-           data-title="我的博客之路正式开始～！" data-url="http://hobi.space/2016/03/03/我的博客之路正式开始～！/">
+      <div class="ds-thread" data-thread-key="2016/03/04/Bound和Frame深入理解以及滑动原理解析/"
+           data-title="Bound和Frame深入理解以及滑动原理解析" data-url="http://hobi.space/2016/03/04/Bound和Frame深入理解以及滑动原理解析/">
       </div>
     
   </div>
@@ -496,7 +509,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于这个博客"><span class="nav-number">1.</span> <span class="nav-text">关于这个博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么我会抽起筋来写博客"><span class="nav-number">1.1.</span> <span class="nav-text">为什么我会抽起筋来写博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客搭建"><span class="nav-number">1.2.</span> <span class="nav-text">博客搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客内容"><span class="nav-number">1.3.</span> <span class="nav-text">博客内容</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#bound和frame-深入理解以及滑动原理解析"><span class="nav-number">1.</span> <span class="nav-text">bound和frame 深入理解以及滑动原理解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bound-和-frame-概念的理解"><span class="nav-number">1.1.</span> <span class="nav-text">bound 和 frame 概念的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这两个属性的利用实现ScrollView的滑动"><span class="nav-number">1.2.</span> <span class="nav-text">这两个属性的利用实现ScrollView的滑动</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
