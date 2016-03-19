@@ -4,10 +4,10 @@
     
   <url>
     <loc>http://hobi.space/2016/03/12/UICollectionViewLayout%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2016-03-15T05:31:56.000Z</lastmod>
+    <lastmod>2016-03-19T04:17:21.000Z</lastmod>
     <data>
         <display>
-        <title>UICollectionViewLayout详解</title>
+        <title>UICollectionViewLayout使用详解</title>
         <pubTime>2016-03-12T15:01:48.000Z</pubTime>
         
         <tag>UICollectionViewLayout </tag>
@@ -17,7 +17,27 @@
          
            
              
-              <breadCrumb title="“iOS”" url="http://hobi.space/categories/%E2%80%9CiOS%E2%80%9D/"/>
+              <breadCrumb title="iOS" url="http://hobi.space/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hobi.space/2016/03/04/Bound%E5%92%8CFrame%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%BB%A5%E5%8F%8A%E6%BB%91%E5%8A%A8%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2016-03-19T04:17:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Bound和Frame详解区别以及滑动原理解析</title>
+        <pubTime>2016-03-04T04:52:28.000Z</pubTime>
+        
+        <tag>UIView </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://hobi.space/categories/iOS/"/>
           
         </display>
     </data>
@@ -26,7 +46,7 @@
     
   <url>
     <loc>http://hobi.space/2016/03/03/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%A7%8B%EF%BD%9E/</loc>
-    <lastmod>2016-03-15T05:24:02.000Z</lastmod>
+    <lastmod>2016-03-17T04:10:59.000Z</lastmod>
     <data>
         <display>
         <title>我的博客之路正式开始～</title>
@@ -38,26 +58,6 @@
            
              
               <breadCrumb title="生活" url="http://hobi.space/categories/%E7%94%9F%E6%B4%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hobi.space/2016/03/04/Bound%E5%92%8CFrame%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E4%BB%A5%E5%8F%8A%E6%BB%91%E5%8A%A8%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90/</loc>
-    <lastmod>2016-03-12T08:52:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>Bound和Frame详解区别以及滑动原理解析</title>
-        <pubTime>2016-03-04T04:52:28.000Z</pubTime>
-        
-        <tag>UIView </tag>
-         
-         
-           
-             
-              <breadCrumb title="“iOS”" url="http://hobi.space/categories/%E2%80%9CiOS%E2%80%9D/"/>
           
         </display>
     </data>
