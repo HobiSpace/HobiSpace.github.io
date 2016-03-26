@@ -3,8 +3,30 @@
 
     
   <url>
+    <loc>http://hobi.space/2016/03/26/AFNetworking3-0%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%EF%BC%8DAFNetworking%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2016-03-26T11:52:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>AFNetworking3.0源码学习笔记<－AFNetworking整体框架></title>
+        <pubTime>2016-03-26T09:59:27.000Z</pubTime>
+        
+        <tag>开源框架源码学习 </tag>
+         
+        <tag>AFNetworking </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://hobi.space/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hobi.space/2016/03/12/UICollectionViewLayout%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2016-03-19T04:17:21.000Z</lastmod>
+    <lastmod>2016-03-21T13:34:51.000Z</lastmod>
     <data>
         <display>
         <title>UICollectionViewLayout使用详解</title>
