@@ -58,15 +58,15 @@
 <meta name="description" content="AFNetworking整体框架学习AFNetworking是基于Foundation框架的一套网络请求的封装库，接口封装的十分友好，是十分值得我们去学习其源码的。这篇文章主要提供一些关于NSURLSession的学习资料，以及我自己对AFNetworking整体框架理解所画的类图去理解AFNetworking整体框架和其模块大概的功能作用，有了这些基本知识和概念后方便后面每个模块深入的学习。
 A">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AFNetworking3.0源码学习笔记<－AFNetworking整体框架>">
+<meta property="og:title" content="AFNetworking3.0源码学习笔记<－ AFNetworking整体框架>">
 <meta property="og:url" content="http://hobi.space/2016/03/26/AFNetworking3-0源码学习笔记-－AFNetworking整体框架/index.html">
 <meta property="og:site_name" content="HobiSpace">
 <meta property="og:description" content="AFNetworking整体框架学习AFNetworking是基于Foundation框架的一套网络请求的封装库，接口封装的十分友好，是十分值得我们去学习其源码的。这篇文章主要提供一些关于NSURLSession的学习资料，以及我自己对AFNetworking整体框架理解所画的类图去理解AFNetworking整体框架和其模块大概的功能作用，有了这些基本知识和概念后方便后面每个模块深入的学习。
 A">
 <meta property="og:image" content="http://7xrl4l.com1.z0.glb.clouddn.com/AFLearning%2FAFNetworkingClassDiagram.png">
-<meta property="og:updated_time" content="2016-03-26T11:52:36.000Z">
+<meta property="og:updated_time" content="2016-03-26T13:58:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AFNetworking3.0源码学习笔记<－AFNetworking整体框架>">
+<meta name="twitter:title" content="AFNetworking3.0源码学习笔记<－ AFNetworking整体框架>">
 <meta name="twitter:description" content="AFNetworking整体框架学习AFNetworking是基于Foundation框架的一套网络请求的封装库，接口封装的十分友好，是十分值得我们去学习其源码的。这篇文章主要提供一些关于NSURLSession的学习资料，以及我自己对AFNetworking整体框架理解所画的类图去理解AFNetworking整体框架和其模块大概的功能作用，有了这些基本知识和概念后方便后面每个模块深入的学习。
 A">
 <meta name="twitter:image" content="http://7xrl4l.com1.z0.glb.clouddn.com/AFLearning%2FAFNetworkingClassDiagram.png">
@@ -87,7 +87,7 @@ A">
   };
 </script>
 
-  <title> AFNetworking3.0源码学习笔记<－AFNetworking整体框架> | HobiSpace </title>
+  <title> AFNetworking3.0源码学习笔记<－ AFNetworking整体框架> | HobiSpace </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +239,7 @@ A">
             
             
               
-                AFNetworking3.0源码学习笔记<－AFNetworking整体框架>
+                AFNetworking3.0源码学习笔记<－ AFNetworking整体框架>
               
             
           </h1>
@@ -326,7 +326,7 @@ A">
 <li>NSURLSessionUploadTask :用于文件上传</li>
 <li>NSURLSessionDownloadTask :用于文件下载</li>
 </ol>
-<p>更加具体相关内容请到<a href="http://objccn.io/issue-5-4/" target="_blank" rel="external">&lt;&lt;从 NSURLConnection 到 NSURLSession&gt;&gt;</a>这边文章有详细的介绍.</p>
+<p>NSURLSession像是一个构造dataTask的工厂，通过传入的request构造task，task则是实际执行这个网络请求的对象。<br>更加具体相关内容请到<a href="http://objccn.io/issue-5-4/" target="_blank" rel="external">&lt;&lt;从 NSURLConnection 到 NSURLSession&gt;&gt;</a>这边文章有详细的介绍.</p>
 <h2 id="AFNetworking整体框架"><a href="#AFNetworking整体框架" class="headerlink" title="AFNetworking整体框架"></a>AFNetworking整体框架</h2><p>AFNetworking源码类图<br><img src="http://7xrl4l.com1.z0.glb.clouddn.com/AFLearning%2FAFNetworkingClassDiagram.png" alt=""><br>从图中可以看出AFNetworking整体结构</p>
 <ol>
 <li><p>AFURLSessionManager基于对NSURLSession的封装,实现了以下协议，用Foundation框架下的NSURLSession类去完成网络操作，封装好了NSURLSessionDataTask、NSURLSessionUploadTask、NSURLSessionDownloadTask的操作并且提供相应的接口。以及提供设置各种回调Block的接口。</p>
@@ -383,6 +383,10 @@ A">
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/03/26/AFNetworking3-0源码学习笔记-二-AFURLSessionManager和AFHTTPSessionManager源码解析/" rel="prev" title="AFNetworking3.0源码学习笔记<二 AFURLSessionManager和AFHTTPSessionManager源码解析>">
+                AFNetworking3.0源码学习笔记<二 AFURLSessionManager和AFHTTPSessionManager源码解析> <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -431,7 +435,7 @@ A">
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/03/26/AFNetworking3-0源码学习笔记-－AFNetworking整体框架/"
-           data-title="AFNetworking3.0源码学习笔记<－AFNetworking整体框架>" data-url="http://hobi.space/2016/03/26/AFNetworking3-0源码学习笔记-－AFNetworking整体框架/">
+           data-title="AFNetworking3.0源码学习笔记<－ AFNetworking整体框架>" data-url="http://hobi.space/2016/03/26/AFNetworking3-0源码学习笔记-－AFNetworking整体框架/">
       </div>
     
   </div>
@@ -476,7 +480,7 @@ A">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
