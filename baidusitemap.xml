@@ -3,8 +3,32 @@
 
     
   <url>
+    <loc>http://hobi.space/2016/06/14/AFNetworking3-0%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89-AFNetworking%E7%BA%BF%E7%A8%8B%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2016-07-14T18:24:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>AFNetworking3.0源码学习笔记<三 AFNetworking线程管理></title>
+        <pubTime>2016-06-14T08:56:29.000Z</pubTime>
+        
+        <tag>开源框架源码学习 </tag>
+         
+        <tag>AFNetworking </tag>
+         
+        <tag>线程 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://hobi.space/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hobi.space/2016/03/26/AFNetworking3-0%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C-AFURLSessionManager%E5%92%8CAFHTTPSessionManager%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</loc>
-    <lastmod>2016-03-29T11:37:25.000Z</lastmod>
+    <lastmod>2016-03-29T14:33:49.000Z</lastmod>
     <data>
         <display>
         <title>AFNetworking3.0源码学习笔记<二 AFURLSessionManager和AFHTTPSessionManager源码解析></title>
