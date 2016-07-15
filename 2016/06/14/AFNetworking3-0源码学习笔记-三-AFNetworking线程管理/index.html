@@ -62,7 +62,7 @@
 <meta property="og:site_name" content="HobiSpace">
 <meta property="og:description" content="AFNetworking线程管理线程代码12345678910111213141516171819202122232425262728293031323334353637383940414243// 公开/** The dispatch queue for `completionBlock`. If `NULL` (default), the main queue is used. */@prop">
 <meta property="og:image" content="http://7xrl4l.com1.z0.glb.clouddn.com/AFLearning/AFThread.png">
-<meta property="og:updated_time" content="2016-07-14T18:26:21.000Z">
+<meta property="og:updated_time" content="2016-07-15T04:52:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AFNetworking3.0源码学习笔记<三 AFNetworking线程管理>">
 <meta name="twitter:description" content="AFNetworking线程管理线程代码12345678910111213141516171819202122232425262728293031323334353637383940414243// 公开/** The dispatch queue for `completionBlock`. If `NULL` (default), the main queue is used. */@prop">
@@ -318,7 +318,7 @@
 </ol>
 <p>［Task Resume］会在原线程调用即调用AFHttpSessionManager的线程。然后在Delegate中进入到Completion的Delegate。在这个方法内，会在url_session_manager_processing_queue执行对responseObject的转化以及对UserInfo字典的设置，这是一条并行子线程。完成后切换到CompletionQueue默认为主线程，且放到Group里面执行CompletionBlock的回调，最后切换到主线程抛带着UserInfo的通知。<br>这里我觉得有两点是设计得很好的。</p>
 <ol>
-<li>并行的ProcessingQueue，因为ReponseObject其实大小是不确定的，转化时间不确定长短。所以需要并行的处理转化每一个ResponseObject，处理完一个就在CompletionQueue回调一个Block，然后抛一个通知。</li>
+<li>并行的ProcessingQueue，这里我有个问题觉得由于GCD没法设置最大并行量，那么假如我发送100个请求，刚好这100个同时回来，这里是没法设置并行量的导致同时创建100条线程处理？</li>
 <li>Group的设计。Group的设计能让用户进行notify通知当group引用计数为0时抛notify，可以很好管理异步任务的总进度。</li>
 </ol>
 
